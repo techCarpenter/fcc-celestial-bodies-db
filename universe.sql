@@ -148,7 +148,8 @@ ALTER SEQUENCE public.galaxy_galaxy_id_seq OWNED BY public.galaxy.galaxy_id;
 CREATE TABLE public.galaxy_type (
   galaxy_type_id integer NOT NULL,
   TYPE character varying(30) NOT NULL,
-  description text
+  description text,
+  name character varying(30)
 );
 
 
@@ -378,19 +379,19 @@ VALUES
 INSERT INTO
   public.galaxy_type
 VALUES
-  (1, 'spiral', 'circle around a center');
+  (1, 'spiral', 'circle around a center', NULL);
 
 
 INSERT INTO
   public.galaxy_type
 VALUES
-  (2, 'elliptical', 'ellipse around a center');
+  (2, 'elliptical', 'ellipse around a center', NULL);
 
 
 INSERT INTO
   public.galaxy_type
 VALUES
-  (3, 'irregullar', 'blob galaxy');
+  (3, 'irregullar', 'blob galaxy', NULL);
 
 
 --
